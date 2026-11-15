@@ -1,6 +1,6 @@
 import './auth.css'
 
-import Header            from '../../components/Header/Header'
+import Header            from '../../components/header/header'
 import axios             from 'axios'
 
 import { useLanguage }   from '../../context/LanguageContext'

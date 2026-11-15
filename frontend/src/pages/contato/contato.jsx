@@ -3,7 +3,7 @@ import './contato.css'
 import { useLanguage }                       from "../../context/LanguageContext"
 import { motion }                            from 'framer-motion'
 
-import Header                                from '../../components/Header/Header'
+import Header                                from '../../components/header/header'
 import FloatingSpheres                       from '../../components/animacoes/esferas/esferas'
 import Form                                  from '../../components/formulario/formulario'
 

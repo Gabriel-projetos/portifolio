@@ -1,5 +1,12 @@
 
 export default{
+     header: {
+          menu: "Menu",
+          sobre: "About me",
+          projetos: "Projects",
+          contato: "Contact",
+          trabalheComigo: "Work with me",
+     },
      home: {
           titulo: "Gabriel Motta Rossetto",
           subtitulo: "FullStack Developer | Data Scient",

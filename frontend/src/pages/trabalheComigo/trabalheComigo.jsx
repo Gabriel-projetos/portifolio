@@ -1,5 +1,5 @@
 import './trabalheComigo.css'
-import Header                                     from "../../components/Header/Header"
+import Header                                     from "../../components/header/header"
 import AbstractWave                               from '../../components/animacoes/fitaMobius/fitaMobius'
 import Carrossel                                  from '../../components/animacoes/carrossel/carrossel'
 
@@ -22,9 +22,10 @@ export default function Trabalhos(){
           {/* Container principal da página */}
           <div className="trabalhos-container">
                
-               {/* Header e Hero compartilham a mesma largura/padding */}
+               {/* Header flutuante/sticky visível durante todo o scroll */}
+               <Header titulo={t.trabalhos.titulo} links={['menu', 'sobre', 'projetos']}/>
+
                <div className="header-hero-wrapper">
-                    <Header titulo={t.trabalhos.titulo} />
 
                     <div className="hero">
                          <div className="hero-left">

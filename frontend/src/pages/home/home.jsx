@@ -4,7 +4,7 @@ import { useLanguage } from "../../context/LanguageContext"
 import { motion } from 'framer-motion'
 import { useNavigate } from "react-router-dom"
 
-import Header from "../../components/Header/Header"
+import Header from "../../components/header/header"
 import LinhasFundo from "../../components/animacoes/home/LinhasFundo"
 
 const containerVariants = {
