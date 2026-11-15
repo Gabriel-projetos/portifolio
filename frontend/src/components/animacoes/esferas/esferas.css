@@ -1,0 +1,17 @@
+.esferas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sphere {
+  position: absolute;
+  top: var(--sphere-top);
+  left: var(--sphere-left);
+  width: var(--sphere-size);
+  height: var(--sphere-size);
+  border-radius: 50%;
+  background: var(--sphere-color);
+}

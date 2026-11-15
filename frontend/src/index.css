@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root.claro{
+     --cor-fundo:        #ece3f7;
+     --cor-icons:        #0a0510;
+     --cor-texto:        #000;
+     --cor-footer:       #1a1a1a;
+     --cor-destaque:     #ffc300;
+}
+
+:root.escuro{
+     --cor-fundo:      #0a0510;
+     --cor-icons:      #ece3f7;
+     --cor-texto:      #fff;
+     --cor-footer:     #9a95a3;
+     --cor-destaque:   #ffc300;
+}
+
+*{
+     margin:             0;
+     padding:            0;
+     box-sizing:         border-box;
+     font-family:        "Libre Franklin", sans-serif;
+}
+
+body{
+     font-family:        "Libre Franklin", sans-serif;
+     background:         var(--cor-fundo);
+     transition:         background 2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family:        "Anton", sans-serif;
+     font-weight:        400; /* A fonte Anton possui peso padrão regular/bold nativo */
+     letter-spacing:     0.5px; /* Opcional: dá um respiro elegante em fontes Display como a Anton */
+}
+
+h1 {
+     font-size:          2.5rem;
+}
+
+h2 {
+     font-size:          2rem;
+}
+
+h3 {
+     font-size:          1.5rem;
+}
+
+p {
+     font-family:        "Libre Franklin", sans-serif;
+     font-weight:        400;
+     font-size:          1rem;
+}

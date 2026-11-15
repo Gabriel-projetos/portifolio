@@ -1,0 +1,203 @@
+/* Container principal da página */
+.trabalhos-container {
+     width:                   100%;
+     min-height:              100vh;
+     display:                 flex;
+     flex-direction:          column;
+     position:                relative;
+     z-index:                 1; 
+}
+
+.abstract-wave-bg {
+     position:                fixed;
+     inset:                   0;
+     width:                   100%;
+     height:                  100%;
+     z-index:                 0;
+     pointer-events:          none;
+     opacity:                 0.35;
+     overflow:                hidden;
+}
+
+.abstract-wave-bg svg {
+     width:                   100%;
+     height:                  100%;
+     display:                 block;
+}
+
+.header-hero-wrapper {
+     width:                   100%;
+     padding:                 0 75px; 
+     display:                 flex;
+     flex-direction:          column;
+}
+
+.landing-container {
+     width:                   100%;
+     max-width:               1280px;
+     margin:                  0 auto;
+     display:                 flex;
+     flex-direction:          column;
+     align-items:             center;
+     justify-content:         center;
+     padding:                 0 20px;
+     padding-top:             100px;
+     gap:                     150px;
+}
+
+/* ===== Seção Hero ===== */
+.hero {
+     width:                   100%;
+     height:                  90vh;
+
+     position:                relative;
+     display:                 flex;
+     flex-direction:          row;
+     justify-content:         space-between;
+     align-items:             center;
+}
+
+.seta-scroll {
+     position:                absolute;
+     bottom:                  100px;
+     left:                    50%;
+     translate:               -50% 0;
+     background:              none;
+     border:                  none;
+     width:                   60px;
+     height:                  60px;
+     display:                 flex;
+     align-items:             center;
+     justify-content:         center;
+     color:                   var(--cor-icons);
+     cursor:                  pointer;
+}
+
+.hero-left {
+     display:                 flex;
+     flex-direction:          column;
+     gap:                     20px;
+}
+
+.hero h1 {
+     font-size:               10rem;
+}
+
+.btn-hero {
+     color:                   inherit;
+     text-decoration:         none;
+     display:                 flex;
+     align-items:             center;
+     gap:                     8px;
+     font-size:               1.5rem; 
+     cursor:                  pointer;
+}
+
+.chamativo {
+     display:                 flex;
+     gap:                     100px;
+}
+
+.chamativo-1 {
+     height:                  20px;
+     padding:                 20px 35px;
+     display:                 flex;
+     align-items:             center;
+     justify-content:         center;
+     background:              var(--cor-icons);
+     border-radius:           15px;
+     color:                   var(--cor-fundo);
+     font-size:               2rem;
+}
+
+.chamativo-2 {
+     height:                  20px;
+     padding:                 20px 35px;
+     display:                 flex;
+     align-items:             center;
+     justify-content:         center;
+     border:                  2px solid var(--cor-icons);
+     border-radius:           15px;
+     color:                   var(--cor-texto);
+     font-size:               2rem;
+}
+
+/* ===== Rows ===== */
+.rows {
+     width:                   100%;
+     max-width:               1280px;
+
+
+     display:                 flex;
+     flex-direction:          column;
+     align-items:             center;
+     justify-content:         center;
+     gap:                     100px;
+}
+
+.row1{
+     display:                 flex;
+}
+
+.btns{
+     display:                 flex;
+     gap:                     20px;
+}
+
+.row-linhas{
+     display:                 flex;
+     gap:                     40px;
+     width:                   100%;
+}
+
+.linha{
+     flex:                    1;
+     border-top:              2px solid var(--cor-texto);
+     padding:                 20px;
+}
+
+/* ===== Footer ===== */
+
+.footer-trabalhos {
+     width:                   100%;
+     padding:                 40px 20px;
+     margin-top:              150px;
+
+     display:                 flex;
+     align-items:             center;
+     justify-content:         space-between;
+}
+
+.left{
+     display:                 flex;
+     gap:                     20px;
+     align-items:             center;
+}
+
+.left a{
+     font-family:             "Anton", sans-serif;
+     color:                   var(--cor-texto);
+     text-decoration:         none;
+     font-size:               1.5rem;
+}
+
+.left a.subtitulo{
+     font-size:               1rem;
+     color:                   var(--cor-footer);
+}
+
+.social-media {
+     display:                 flex;
+     gap:                     20px;
+}
+
+.social-media a {
+     color:                   var(--cor-footer);
+     text-decoration:         none;
+     display:                 flex;
+     transition:              color 0.2s;
+}
+
+.social-media a:hover {
+     color:                   var(--cor-texto);
+}
