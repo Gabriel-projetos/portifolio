@@ -2,15 +2,18 @@ import './trabalheComigo.css'
 import Header                                     from "../../components/header/header"
 import AbstractWave                               from '../../components/animacoes/fitaMobius/fitaMobius'
 import Carrossel                                  from '../../components/animacoes/carrossel/carrossel'
+import derBarbearia                               from '../../assets/derbarbearia.png'
 
-import { BotaoContato }                           from '../../components/botaoModo/botoes'
+import { BotaoContato, BotaoRota }                from '../../components/botaoModo/botoes'
 import { useLanguage }                            from "../../context/LanguageContext"
-import { motion }                                 from 'framer-motion'
+import { motion, AnimatePresence }                from 'framer-motion'
 import { FiChevronDown, FiDatabase, FiLayout }    from 'react-icons/fi'
 import { FaLinkedin, FaGithub }                   from 'react-icons/fa'
+import { useState }                               from 'react'
 
 export default function Trabalhos(){
      const { t } = useLanguage()
+     const [bdAberto, setBdAberto] = useState(false)
 
      return(
           <>
@@ -57,11 +60,42 @@ export default function Trabalhos(){
                               <div className="text">
                                    <h1>{t.trabalhos.row1Titulo}</h1>
                                    <p>{t.trabalhos.row1Text}</p>
-                                   <BotaoContato/>
+                                   <div className="btns">
+                                        <BotaoRota
+                                             texto={bdAberto ? t.trabalhos.verMenos : t.trabalhos.verMais}
+                                             onClick={() => setBdAberto(!bdAberto)}
+                                             />
+                                        <BotaoContato/>
+                                   </div>
                               </div>
                               <FiDatabase size={250} />
                          </div>{/* Row 1 */}
-
+                         <AnimatePresence initial={false}>
+                              {bdAberto && (
+                                   <motion.div
+                                        className="projeto-detalhe"
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                                   >
+                                        <div className="projeto-detalhe-conteudo">
+                                             <h2>{t.trabalhos.barbeariaTitulo}</h2>
+                                             <p>{t.trabalhos.barbeariaTexto}</p>
+                                             <img
+                                                  className="projeto-imagem"
+                                                  src={derBarbearia}
+                                                  alt={t.trabalhos.barbeariaAlt}
+                                                  loading="lazy"
+                                             />
+                                             <a href="https://github.com/Gabriel-projetos/barbearia-bd"
+                                             target="_blank" rel="noopener noreferrer">
+                                                  {t.trabalhos.verGithub}
+                                             </a>
+                                        </div>
+                                   </motion.div>
+                              )}
+                         </AnimatePresence>
                          <div className="row1">
                               <FiLayout size={250} />
                               <div className="text">

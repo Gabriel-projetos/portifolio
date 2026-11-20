@@ -79,7 +79,7 @@ export default function Home(){
                     </motion.button>
 
                     {/* Botão Meus Trabalhos */}
-                    <motion.button className="btn-pages"  onClick={() => navigate('/trabalhos')}
+                    <motion.button className="btn-pages"  onClick={() => navigate('/')}
                                    variants={botaoVariants}
                                    custom={2.6}
                                    initial="hidden"
