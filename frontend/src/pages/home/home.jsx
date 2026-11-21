@@ -49,7 +49,25 @@ export default function Home(){
                                    initial="hidden"
                                    animate="visible"
                                    whileHover="hover">
-                         <span className="btn-text">{t.home.btn1}</span>
+                         <span className="btn-text">{t.header.contato}</span>
+                         <motion.span
+                              className="underline-left"
+                              variants={underlineVariants}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}/>
+                         <motion.span
+                              className="underline-right"
+                              variants={underlineVariants}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}/>                    
+                    </motion.button>
+
+                    {/* Botão Projetos */}
+                    <motion.button className="btn-pages"  onClick={() => navigate('/projetos')}
+                                   variants={botaoVariants}
+                                   custom={2.6}
+                                   initial="hidden"
+                                   animate="visible"
+                                   whileHover="hover">
+                         <span className="btn-text">{t.header.projetos}</span>
                          <motion.span
                               className="underline-left"
                               variants={underlineVariants}
@@ -67,7 +85,7 @@ export default function Home(){
                                    initial="hidden"
                                    animate="visible"
                                    whileHover="hover">
-                         <span className="btn-text">{t.home.btn2}</span>
+                         <span className="btn-text">{t.header.sobre}</span>
                          <motion.span
                               className="underline-left"
                               variants={underlineVariants}
@@ -85,7 +103,7 @@ export default function Home(){
                                    initial="hidden"
                                    animate="visible"
                                    whileHover="hover">
-                         <span className="btn-text">{t.home.btn3}</span>
+                         <span className="btn-text">{t.header.trabalheComigo}</span>
                          <motion.span
                               className="underline-left"
                               variants={underlineVariants}

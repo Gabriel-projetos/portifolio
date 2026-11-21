@@ -4,6 +4,7 @@ import AbstractWave                               from '../../components/animaco
 import Carrossel                                  from '../../components/animacoes/carrossel/carrossel'
 import derBarbearia                               from '../../assets/derbarbearia.png'
 
+import { useNavigate }                            from 'react-router-dom'
 import { BotaoContato, BotaoRota }                from '../../components/botaoModo/botoes'
 import { useLanguage }                            from "../../context/LanguageContext"
 import { motion, AnimatePresence }                from 'framer-motion'
@@ -13,7 +14,9 @@ import { useState }                               from 'react'
 
 export default function Trabalhos(){
      const { t } = useLanguage()
+     const navigate = useNavigate()
      const [bdAberto, setBdAberto] = useState(false)
+     const [uxAberto, setUxAberto] = useState(false)
 
      return(
           <>
@@ -101,9 +104,40 @@ export default function Trabalhos(){
                               <div className="text">
                                    <h1>{t.trabalhos.row2Titulo}</h1>
                                    <p>{t.trabalhos.row2Text}</p>
-                                   <BotaoContato/>
+                                   <div className="btns">
+                                        <BotaoRota
+                                             texto={uxAberto ? t.trabalhos.verMenos : t.trabalhos.verMais}
+                                             onClick={() => setUxAberto(!uxAberto)}
+                                             />
+                                        <BotaoContato/>
+                                   </div>
                               </div>
                          </div>{/* Row 2 */}
+                         <AnimatePresence initial={false}>
+                              {uxAberto && (
+                                   <motion.div
+                                        className="projeto-detalhe"
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                                   >
+                                        <div className="projeto-detalhe-conteudo">
+                                             <h2>{t.trabalhos.uxTitulo}</h2>
+                                             <p>{t.trabalhos.uxTexto}</p>
+                                             <a href="https://github.com/Gabriel-projetos/portifolio"
+                                             target="_blank" rel="noopener noreferrer">
+                                                  {t.trabalhos.verGithub}
+                                             </a>
+                                        </div>
+                                   </motion.div>
+                              )}
+                         </AnimatePresence>
+                         
+                         <BotaoRota
+                              texto={t.header.projetos}
+                              onClick={() => navigate('/projetos')}
+                              />
 
                          <div className="row-linhas">
                               <p className='linha'>

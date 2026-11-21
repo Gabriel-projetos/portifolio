@@ -10,9 +10,6 @@ export default{
      home: {
           titulo: "Gabriel Motta Rossetto",
           subtitulo: "Desenvolvedor FullStack | Cientista de Dados",
-          btn1: "Contato",
-          btn2: "Sobre Mim",
-          btn3: "Trabalhe Comigo"
      },
 
      contato: {
@@ -38,6 +35,8 @@ export default{
           barbeariaTexto: "Projeto acadêmico de banco de dados relacional para gerenciar clientes, barbeiros, serviços, agendamentos e pagamentos de uma barbearia. Desenvolvi o ciclo completo: levantamento de requisitos, modelo conceitual (DER), modelo lógico e script físico em SQL (DDL), com chaves primárias e estrangeiras e restrições de integridade referencial. O relacionamento N:N entre agendamentos e serviços foi resolvido com uma tabela associativa (agendamento_servico), permitindo que um agendamento tenha vários serviços e que cada serviço apareça em vários agendamentos. Cada agendamento pertence a um único cliente e a um único barbeiro, e gera no máximo um pagamento, garantido por uma restrição UNIQUE.",
           verGithub: "Ver no GitHub",
           barbeariaAlt: "Diagrama entidade-relacionamento do banco de dados da barbearia",
+          uxTitulo: "Interfaces Minimalistas e Usáveis",
+          uxTexto: "Este portfólio é o meu maior projeto de UX/UI: projetei e implementei toda a interface, da hierarquia visual ao código. Priorizei clareza e navegação direta, com uma paleta enxuta, tipografia única, modo claro e escuro, versão bilíngue e um header fixo com efeito de vidro que mantém o menu sempre acessível. As animações com Framer Motion reforçam o feedback das interações sem competir com o conteúdo. Além dele, participei de outros projetos de interface, contribuindo com prototipagem / implementação do front-end."
      },
 
      auth: {

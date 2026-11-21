@@ -10,9 +10,6 @@ export default{
      home: {
           titulo: "Gabriel Motta Rossetto",
           subtitulo: "FullStack Developer | Data Scient",
-          btn1: "Contact",
-          btn2: "About me",
-          btn3: "Work with me"
      },
 
      contato: {
@@ -39,5 +36,7 @@ export default{
           barbeariaTecnologias: "Conceptual and logical modeling · SQL (DDL) · MySQL",
           verGithub: "See on GitHub",
           barbeariaAlt: "Entity-relationship diagram of the barbershop database",
+          uxTitulo: "Minimalist, Usable Interfaces",
+          uxTexto: "This portfolio is my largest UX/UI project: I designed and built the entire interface, from visual hierarchy to code. I prioritized clarity and direct navigation, with a lean color palette, a single typeface, light and dark modes, a bilingual version, and a sticky glass-effect header that keeps the menu always within reach. Framer Motion animations reinforce interaction feedback without competing with the content. Beyond it, I have contributed to other interface projects, working on prototyping / front-end implementation",
      },
 }
